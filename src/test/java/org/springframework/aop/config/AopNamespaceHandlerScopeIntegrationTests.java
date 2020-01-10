@@ -22,6 +22,7 @@ import org.junit.Test;
 import org.springframework.aop.framework.Advised;
 import org.springframework.aop.support.AopUtils;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpSession;
 import org.springframework.tests.sample.beans.ITestBean;
@@ -136,4 +137,9 @@ public class AopNamespaceHandlerScopeIntegrationTests {
 		assertTrue("Should have advisors", ((Advised) scoped).getAdvisors().length > 0);
 	}
 
+	//=============================================本地测试================================================
+	@Test
+	public void test01(){
+		System.out.println("hello world");
+	}
 }
